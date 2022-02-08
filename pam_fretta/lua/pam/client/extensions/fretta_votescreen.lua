@@ -14,8 +14,8 @@ function PAM_EXTENSION:OnVoterAdded(ply, map_id)
 	panel:AddVoter(ply)
 end
 
-function PAM_EXTENSION:OnWinnerAnnounced()
-	panel:Flash(PAM.winning_option_id)
+function PAM_EXTENSION:OnOptionWon()
+	panel:Flash(PAM.winning_option.id)
 end
 
 function PAM_EXTENSION:ToggleVisibility()
@@ -30,7 +30,7 @@ function PAM_EXTENSION:OnEnable()
 		end
 	end
 	if PAM.state == PAM.STATE_FINISHED then
-		self:OnWinnerAnnounced()
+		self:OnOptionWon()
 	end
 end
 
