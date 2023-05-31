@@ -1,5 +1,5 @@
 PAM_EXTENSION.name = "fretta_votescreen"
-PAM_EXTENSION.enabled = false
+PAM_EXTENSION.enabled = true
 local panel = nil
 
 function PAM_EXTENSION:OnVoteStarted()
